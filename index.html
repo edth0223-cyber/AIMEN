@@ -17,23 +17,22 @@ body {
   overflow-x:hidden;
 }
 
-/* HOLY DIGITAL BACKGROUND */
-.background {
+/* DIGITAL HOLY BACKGROUND */
+.bg {
   position:fixed;
   inset:0;
   z-index:-2;
   background:
-    linear-gradient(transparent 95%, rgba(159,224,255,0.05) 96%),
-    linear-gradient(90deg, transparent 95%, rgba(159,224,255,0.05) 96%),
-    radial-gradient(circle at top, rgba(255,215,0,0.15), transparent 60%),
-    #000;
+    linear-gradient(rgba(159,224,255,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(159,224,255,0.08) 1px, transparent 1px),
+    radial-gradient(circle at center, rgba(255,215,0,0.15), transparent 60%);
   background-size:40px 40px,40px 40px,100% 100%;
-  animation: pulse 8s infinite alternate;
+  animation: gridMove 20s linear infinite;
 }
 
-@keyframes pulse {
-  from {opacity:0.7;}
-  to {opacity:1;}
+@keyframes gridMove {
+  from {background-position:0 0,0 0,center;}
+  to {background-position:200px 200px,200px 200px,center;}
 }
 
 header {
@@ -50,19 +49,19 @@ header {
   height:160px;
   border-radius:50%;
   border:3px solid #ffd700;
-  box-shadow:0 0 25px #ffd700,0 0 50px #9fe0ff;
+  box-shadow:0 0 30px #ffd700,0 0 70px #9fe0ff;
   animation: glow 3s infinite alternate;
 }
 
 @keyframes glow {
-  from { box-shadow:0 0 15px #ffd700,0 0 30px #9fe0ff;}
-  to { box-shadow:0 0 40px #ffd700,0 0 70px #9fe0ff;}
+  from {box-shadow:0 0 20px #ffd700,0 0 40px #9fe0ff;}
+  to {box-shadow:0 0 50px #ffd700,0 0 90px #9fe0ff;}
 }
 
 h1 {
   font-size:4rem;
   color:#ffd700;
-  text-shadow:0 0 20px #ffd700,0 0 40px #9fe0ff;
+  text-shadow:0 0 25px #ffd700,0 0 50px #9fe0ff;
 }
 
 .subtitle {
@@ -79,27 +78,20 @@ section {
 
 h2 {
   color:#ffd700;
-  text-shadow:0 0 10px #9fe0ff;
+  text-shadow:0 0 15px #9fe0ff;
 }
 
 .scripture {
-  border:1px solid rgba(159,224,255,0.5);
+  border:1px solid rgba(159,224,255,0.6);
   padding:30px;
-  background:rgba(0,0,0,0.6);
-  box-shadow:0 0 30px rgba(159,224,255,.3);
+  background:rgba(0,0,0,0.75);
+  box-shadow:0 0 40px rgba(159,224,255,.4);
   border-radius:12px;
   font-style:italic;
-  backdrop-filter: blur(4px);
 }
 
-ul {
-  padding:0;
-}
-
-li {
-  list-style:none;
-  padding:10px;
-}
+ul {padding:0;}
+li {list-style:none;padding:10px;}
 
 button {
   background:linear-gradient(45deg,#ffd700,#9fe0ff);
@@ -110,19 +102,12 @@ button {
   font-family:'Orbitron', sans-serif;
   border-radius:30px;
   cursor:pointer;
-  box-shadow:0 0 20px #9fe0ff;
-  transition:0.3s;
-}
-
-button:hover {
-  transform:scale(1.05);
-  box-shadow:0 0 35px #ffd700;
+  box-shadow:0 0 25px #9fe0ff;
 }
 
 footer {
   padding:40px;
   border-top:1px solid #9fe0ff;
-  font-size:0.9rem;
 }
 
 /* MOBILE */
@@ -136,7 +121,7 @@ footer {
 
 <body>
 
-<div class="background"></div>
+<div class="bg"></div>
 
 <header>
 <img src="10.jpg" class="logo" alt="AIMEN Logo">
@@ -156,7 +141,6 @@ for they shall not fear the unknown.<br><br>
 
 This is not wealth, but faith.<br>
 This is not profit, but truth.<br><br>
-
 aimen
 </div>
 </section>
@@ -194,7 +178,6 @@ aimen
 This project is a work of art and philosophy.<br>
 It offers reflection, not instruction.<br>
 Truth belongs to those who seek it freely.<br><br>
-
 aimen
 </div>
 </section>
